@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MyGyazo.Core/MyGyazo.Core.csproj" />
+    <Project Path="src/MyGyazo.Desktop/MyGyazo.Desktop.csproj" />
+    <Project Path="src/MyGyazo.WinUI/MyGyazo.WinUI.csproj" />
+    <Project Path="src/MyGyazo/MyGyazo.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MyGyazo.Tests/MyGyazo.Tests.csproj" />
+    <Project Path="tests/MyGyazo.UiChecks/MyGyazo.UiChecks.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,31 @@
+<Window x:Class="MyGyazo.SettingsWindow" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="My Gyazo — Settings" ThemeMode="Light" Width="680" Height="780" MinWidth="580" MinHeight="540" WindowStartupLocation="CenterScreen" Style="{StaticResource AppWindow}">
+  <DockPanel Margin="28,24">
+    <StackPanel DockPanel.Dock="Top" Margin="0,0,0,24">
+      <TextBlock Text="MAKE IT YOURS" Foreground="{StaticResource AccentBrush}" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,10" />
+      <TextBlock Text="Settings" FontSize="30" FontWeight="SemiBold" /><TextBlock Text="A few preferences. A smoother workflow." Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+    </StackPanel>
+    <StackPanel DockPanel.Dock="Bottom" Margin="0,18,0,0">
+      <TextBlock x:Name="SettingsError" Foreground="#A33142" TextWrapping="Wrap" Visibility="Collapsed" Margin="0,0,0,12" AutomationProperties.LiveSetting="Assertive" />
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"><Button Content="Cancel" Click="Cancel_Click" IsCancel="True" Style="{StaticResource ActionButton}" Margin="0,0,10,0" /><Button Content="Save changes" Click="Save_Click" IsDefault="True" Style="{StaticResource PrimaryButton}" /></StackPanel>
+    </StackPanel>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><StackPanel>
+      <Border Style="{StaticResource Card}" Padding="22" Margin="0,0,0,12"><StackPanel>
+        <TextBlock Text="Capture folder" Style="{StaticResource SectionTitle}" /><TextBlock Text="Every screenshot is saved here as a PNG." Style="{StaticResource MutedText}" Margin="0,0,0,16" />
+        <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+          <TextBox x:Name="FolderBox" Padding="10,8" VerticalContentAlignment="Center" AutomationProperties.Name="Capture folder" />
+          <Button Grid.Column="1" Content="Browse…" Click="Browse_Click" Style="{StaticResource ActionButton}" Margin="10,0,0,0" />
+        </Grid>
+        <TextBlock Text="Changing this folder leaves previous captures where they are." Style="{StaticResource MutedText}" FontSize="12" Margin="0,12,0,0" />
+      </StackPanel></Border>
+      <Border Style="{StaticResource Card}" Padding="22" Margin="0,0,0,12"><StackPanel>
+        <TextBlock Text="Keyboard shortcut" Style="{StaticResource SectionTitle}" /><TextBlock Text="Start a capture from anywhere on your desktop." Style="{StaticResource MutedText}" Margin="0,0,0,18" />
+        <WrapPanel VerticalAlignment="Center"><CheckBox x:Name="CtrlBox" Content="Ctrl" VerticalAlignment="Center" Margin="0,0,20,0" /><CheckBox x:Name="ShiftBox" Content="Shift" VerticalAlignment="Center" Margin="0,0,20,0" /><CheckBox x:Name="AltBox" Content="Alt" VerticalAlignment="Center" Margin="0,0,20,0" /><TextBlock Text="+" VerticalAlignment="Center" Foreground="{StaticResource MutedBrush}" Margin="0,0,16,0" /><ComboBox x:Name="KeyBox" Width="90" DisplayMemberPath="Label" SelectedValuePath="Value" AutomationProperties.Name="Shortcut key" /></WrapPanel>
+      </StackPanel></Border>
+      <Border Style="{StaticResource Card}" Padding="22"><StackPanel>
+        <TextBlock Text="Ready when you are" Style="{StaticResource SectionTitle}" /><CheckBox x:Name="StartupBox" Content="Launch My Gyazo when I sign in" Margin="0,10,0,12" />
+        <TextBlock Text="The app stays in your system tray. Keep it in a permanent folder before enabling this option." Style="{StaticResource MutedText}" FontSize="12" />
+      </StackPanel></Border>
+    </StackPanel></ScrollViewer>
+  </DockPanel>
+</Window>

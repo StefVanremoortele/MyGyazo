@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings><Nullable>enable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets/App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../MyGyazo.Core/MyGyazo.Core.csproj" /></ItemGroup>
+  <ItemGroup><InternalsVisibleTo Include="MyGyazo.UiChecks" /></ItemGroup>
+  <ItemGroup><Resource Include="Assets/App.ico" /></ItemGroup>
+</Project>

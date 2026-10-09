@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0-windows</TargetFramework><UseWindowsForms>true</UseWindowsForms><ImplicitUsings>disable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../MyGyazo.Core/MyGyazo.Core.csproj" />
+    <Compile Include="../MyGyazo/CaptureOverlay.cs" Link="CaptureOverlay.cs" />
+    <InternalsVisibleTo Include="MyGyazo.WinUI" />
+  </ItemGroup>
+</Project>

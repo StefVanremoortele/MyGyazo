@@ -1,0 +1,40 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "my-gyazo",
+  "version": 1,
+  "spacing": {
+    "unit": { "value": 4, "type": "dimension" },
+    "controlInset": { "value": 8, "type": "dimension" },
+    "related": { "value": 12, "type": "dimension" },
+    "pageInset": { "value": 12, "type": "dimension" },
+    "section": { "value": 16, "type": "dimension" },
+    "majorSection": { "value": 24, "type": "dimension" }
+  },
+  "layout": {
+    "navigationPane": { "value": 180, "type": "dimension" },
+    "libraryRegular": { "value": 248, "type": "dimension" },
+    "libraryCompact": { "value": 216, "type": "dimension" },
+    "libraryPreviewDivider": { "value": 1, "type": "dimension" },
+    "settingsMaxWidth": { "value": 760, "type": "dimension" },
+    "thumbnailWidth": { "value": 56, "type": "dimension" },
+    "thumbnailHeight": { "value": 40, "type": "dimension" }
+  },
+  "typography": {
+    "sectionHeading": { "value": 18, "type": "fontSize" },
+    "primary": { "value": 14, "type": "fontSize" },
+    "listPrimary": { "value": 13, "type": "fontSize" },
+    "secondary": { "value": 12, "type": "fontSize" }
+  },
+  "surfaces": {
+    "backdrop": { "value": "MicaBackdrop", "type": "reference" },
+    "canvas": { "value": "{ThemeResource SolidBackgroundFillColorBaseBrush}", "type": "color" },
+    "divider": { "value": "{ThemeResource DividerStrokeColorDefaultBrush}", "type": "color" },
+    "secondaryText": { "value": "{ThemeResource TextFillColorSecondaryBrush}", "type": "color" },
+    "accentText": { "value": "{ThemeResource AccentTextFillColorPrimaryBrush}", "type": "color" }
+  },
+  "behavior": {
+    "selection": { "value": "preserve-selected-path", "type": "string" },
+    "sortDefault": { "value": "newest-first", "type": "string" },
+    "commandOverflow": { "value": "native-auto", "type": "string" }
+  }
+}
